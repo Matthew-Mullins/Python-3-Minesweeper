@@ -146,6 +146,8 @@ class Minesweeper(Frame):
             print("You Won!")
         else:
             print("You Lost!")
+        for b in self._buttons:
+            b.config(state=DISABLED)
 
     def _ButtonClick(self, row, col):
         if self._tiles[row][col] == 0:
